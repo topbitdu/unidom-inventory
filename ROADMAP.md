@@ -1,0 +1,10 @@
+# Unidom Payment Roadmap 支付领域模型引擎路线图
+
+## v0.1
+1. Serialized Inventory Item model & migration
+2. Grouped Inventory Item model & migration
+
+## v0.2
+1. As Inventory Item concern
+2. As Store concern
+3. As Stored concern
