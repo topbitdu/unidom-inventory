@@ -1,4 +1,4 @@
-# Unidom Payment Roadmap 支付领域模型引擎路线图
+# Unidom Inventory Roadmap 库存领域模型引擎路线图
 
 ## v0.1
 1. Serialized Inventory Item model & migration
