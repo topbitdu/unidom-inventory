@@ -3,3 +3,8 @@
 ## v0.1
 1. Serialized Inventory Item model & migration
 2. Grouped Inventory Item model & migration
+
+## v0.2
+1. As Inventory Item concern
+2. Improved the Grouped Inventory Item model to include the As Inventory Item concern
+3. Improved the Serialized Inventory Item model to include the As Inventory Item concern
