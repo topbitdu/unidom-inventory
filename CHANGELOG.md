@@ -8,3 +8,7 @@
 1. As Inventory Item concern
 2. Improved the Grouped Inventory Item model to include the As Inventory Item concern
 3. Improved the Serialized Inventory Item model to include the As Inventory Item concern
+
+## v0.3
+2. As Store concern
+3. As Stored concern
