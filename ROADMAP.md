@@ -10,5 +10,5 @@
 3. Improve the Serialized Inventory Item model to include the As Inventory Item concern
 
 ## v0.3
-2. As Store concern
-3. As Stored concern
+1. As Store concern
+2. As Stored concern
