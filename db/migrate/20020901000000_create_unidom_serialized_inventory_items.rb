@@ -8,6 +8,7 @@ class CreateUnidomSerializedInventoryItems < ActiveRecord::Migration
         polymorphic: { null: false, default: '', limit: 200 }
       t.references :store,  type: :uuid, null: false,
         polymorphic: { null: false, default: '', limit: 200 }
+      t.references :lot,    type: :uuid, null: true
 
       t.string :serial_number, null: false, default: nil, limit: 200
 
@@ -23,6 +24,7 @@ class CreateUnidomSerializedInventoryItems < ActiveRecord::Migration
 
     add_index :unidom_serialized_inventory_items, :stored_id
     add_index :unidom_serialized_inventory_items, :store_id
+    add_index :unidom_serialized_inventory_items, :lot_id
     add_index :unidom_serialized_inventory_items, :serial_number
 
   end

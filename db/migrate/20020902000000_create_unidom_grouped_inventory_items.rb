@@ -8,6 +8,7 @@ class CreateUnidomGroupedInventoryItems < ActiveRecord::Migration
         polymorphic: { null: false, default: '', limit: 200 }
       t.references :store,  type: :uuid, null: false,
         polymorphic: { null: false, default: '', limit: 200 }
+      t.references :lot,    type: :uuid, null: true
 
       t.decimal :quantity, null: false, default: 0.0, precision: 10, scale: 6
 
@@ -23,6 +24,7 @@ class CreateUnidomGroupedInventoryItems < ActiveRecord::Migration
 
     add_index :unidom_grouped_inventory_items, :stored_id
     add_index :unidom_grouped_inventory_items, :store_id
+    add_index :unidom_grouped_inventory_items, :lot_id
 
   end
 

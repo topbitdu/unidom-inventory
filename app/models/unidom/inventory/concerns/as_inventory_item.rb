@@ -6,6 +6,7 @@ module Unidom::Inventory::Concerns::AsInventoryItem
 
     belongs_to :stored, polymorphic: true
     belongs_to :store,  polymorphic: true
+    belongs_to :lot,    class_name:  'Unidom::Inventory::Lot'
 
   end
 
