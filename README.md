@@ -32,8 +32,14 @@ The migration versions start with 200209.
 
 ## Call the Model
 ```ruby
-Unidom::Inventory::SerializedInventoryItem.valid_at.alive.first
-Unidom::Inventory::GroupedInventoryItem.valid_at.alive.first
+lot = Unidom::Inventory::Lot.create! identification_number: '20040312', description: '1 more thing', instruction: 'Please note...'
+
+serialized_inventory_item = Unidom::Inventory::SerializedInventoryItem.create! store: shop, stored: product, lot: lot, serial_number: '19840101'
+grouped_inventory_item = Unidom::Inventory::GroupedInventoryItem.create! store: shop, stored: product, lot: lot, quantity: 100
+# The lot is optional for the serialized inventory item or the grouped inventory item.
+
+lot.grouped_inventory_items.create! store: @shop, stored: @product, quantity: 100
+lot.serialized_inventory_items.create! store: @shop, stored: @product, serial_number: '19840101'
 ```
 
 

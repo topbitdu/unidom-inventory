@@ -12,3 +12,7 @@
 ## v0.3
 1. As Store concern
 2. As Stored concern
+
+## v0.4
+1. Lot model & migration
+2. Improve the As Inventory Item to add the optional #lot association
