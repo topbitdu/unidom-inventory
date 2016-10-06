@@ -5,7 +5,6 @@ class Unidom::Inventory::Lot < ActiveRecord::Base
   self.table_name = 'unidom_lots'
 
   include Unidom::Common::Concerns::ModelExtension
-  include Unidom::Inventory::Concerns::AsInventoryItem
 
   validates :quantity,              presence: true, numericality: true
   validates :identification_number, presence: true, length: { in: 2..columns_hash['identification_number'].limit }
