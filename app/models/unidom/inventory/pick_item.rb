@@ -8,7 +8,7 @@ class Unidom::Inventory::PickItem < ActiveRecord::Base
 
   validates :quantity, presence: true, numericality: true
 
-  belongs_to :list,           class_name:  'Unidom::Inventory::PickList'
+  belongs_to :pick_list,      class_name:  'Unidom::Inventory::PickList'
   belongs_to :inventory_item, polymorphic: true
 
 end
