@@ -43,6 +43,11 @@ grouped_inventory_item = Unidom::Inventory::GroupedInventoryItem.create! store: 
 
 lot.grouped_inventory_items.create! store: @shop, stored: @product, quantity: 100
 lot.serialized_inventory_items.create! store: @shop, stored: @product, serial_number: '19840101'
+
+pick_list    = Unidom::Inventory::PickList.create!
+pick_item    = pick_list.items.create! inventory_item: grouped_inventory_item, quantity: 100
+item_issuing = Unidom::Inventory::ItemIssuing.create! pick_item: pick_item, inventory_item: grouped_inventory_item, target_item: nil
+# target_item could be nil or any model like: shipment item or order item
 ```
 
 
@@ -58,6 +63,8 @@ include Unidom::Inventory::AsInventoryItem
 The As Inventory Item concern do the following tasks for the includer automatically: 
 1. Define the belongs_to :stored macro as: ``belongs_to :stored, polymorphic: true``
 2. Define the belongs_to :store macro as: ``belongs_to :store, polymorphic: true``
+3. Define the belongs_to :lot macro as: ``belongs_to :lot, class_name: 'Unidom::Inventory::Lot'``
+4. Define the has_many :pick_items macro as: ``has_many :pick_items, class_name: 'Unidom::Inventory::PickItem', as: :inventory_item``
 
 ### As Store concern
 
