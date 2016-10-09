@@ -34,6 +34,7 @@ The migration versions start with 200209.
 
 
 ## Call the Model
+
 ```ruby
 lot = Unidom::Inventory::Lot.create! identification_number: '20040312', description: '1 more thing', instruction: 'Please note...'
 
