@@ -49,6 +49,10 @@ pick_list    = Unidom::Inventory::PickList.create!
 pick_item    = pick_list.items.create! inventory_item: grouped_inventory_item, quantity: 100
 item_issuing = Unidom::Inventory::ItemIssuing.create! pick_item: pick_item, inventory_item: grouped_inventory_item, target_item: nil
 # target_item could be nil or any model like: shipment item or order item
+
+variance = Unidom::Inventory::InventoryItemVariance.create! inventory_item: grouped_inventory_item, reason: nil, opened_at: Time.now
+# or the following source code do the exact same thing.
+grouped_inventory_item.variances.create! quantity: 10, reason: nil, opened_at: Time.now
 ```
 
 
@@ -66,6 +70,7 @@ The As Inventory Item concern do the following tasks for the includer automatica
 2. Define the belongs_to :store macro as: ``belongs_to :store, polymorphic: true``  
 3. Define the belongs_to :lot macro as: ``belongs_to :lot, class_name: 'Unidom::Inventory::Lot'``  
 4. Define the has_many :pick_items macro as: ``has_many :pick_items, class_name: 'Unidom::Inventory::PickItem', as: :inventory_item``
+5. Define the has_many :variances macro as: ``has_many :variances, class_name: 'Unidom::Inventory::InventoryItemVariance', as: :inventory_item``
 
 ### As Store concern
 
