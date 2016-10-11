@@ -65,21 +65,21 @@ include Unidom::Inventory::AsInventoryItem
 
 ### As Inventory Item concern
 
-The As Inventory Item concern do the following tasks for the includer automatically: 
+The As Inventory Item concern do the following tasks for the includer automatically:  
 1. Define the belongs_to :stored macro as: ``belongs_to :stored, polymorphic: true``  
 2. Define the belongs_to :store macro as: ``belongs_to :store, polymorphic: true``  
 3. Define the belongs_to :lot macro as: ``belongs_to :lot, class_name: 'Unidom::Inventory::Lot'``  
-4. Define the has_many :pick_items macro as: ``has_many :pick_items, class_name: 'Unidom::Inventory::PickItem', as: :inventory_item``
+4. Define the has_many :pick_items macro as: ``has_many :pick_items, class_name: 'Unidom::Inventory::PickItem', as: :inventory_item``  
 5. Define the has_many :variances macro as: ``has_many :variances, class_name: 'Unidom::Inventory::InventoryItemVariance', as: :inventory_item``
 
 ### As Store concern
 
-The As Store concern do the following tasks for the includer automatically: 
+The As Store concern do the following tasks for the includer automatically:  
 1. Define the has_many :grouped_inventory_items macro as: ``has_many :grouped_inventory_items, class_name: 'Unidom::Inventory::GroupedInventoryItem', foreign_key: :store_id``  
 2. Define the has_many :serialized_inventory_items macro as: ``has_many :serialized_inventory_items, class_name: 'Unidom::Inventory::SerializedInventoryItem', foreign_key: :store_id``
 
 ### As Stored concern
 
-The As Stored concern do the following tasks for the includer automatically: 
+The As Stored concern do the following tasks for the includer automatically:  
 1. Define the has_many :grouped_inventory_items macro as: ``has_many :grouped_inventory_items, class_name: 'Unidom::Inventory::GroupedInventoryItem', foreign_key: :stored_id``  
 2. Define the has_many :serialized_inventory_items macro as: ``has_many :serialized_inventory_items, class_name: 'Unidom::Inventory::SerializedInventoryItem', foreign_key: :stored_id``
