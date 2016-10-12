@@ -50,9 +50,9 @@ pick_item    = pick_list.items.create! inventory_item: grouped_inventory_item, q
 item_issuing = Unidom::Inventory::ItemIssuing.create! pick_item: pick_item, inventory_item: grouped_inventory_item, target_item: nil
 # target_item could be nil or any model like: shipment item or order item
 
-variance = Unidom::Inventory::InventoryItemVariance.create! inventory_item: grouped_inventory_item, reason: nil, opened_at: Time.now
+Unidom::Inventory::InventoryItemVariance.adjust! @inventory_item, quantity: 1, due_to: nil, at: Time.now, description: nil, instruction: nil
 # or the following source code do the exact same thing.
-grouped_inventory_item.variances.create! quantity: 10, reason: nil, opened_at: Time.now
+grouped_inventory_item.is_adjusted! 10, due_to: nil, at: Time.now, description: nil, instruction: nil
 ```
 
 
@@ -70,7 +70,8 @@ The As Inventory Item concern do the following tasks for the includer automatica
 2. Define the belongs_to :store macro as: ``belongs_to :store, polymorphic: true``  
 3. Define the belongs_to :lot macro as: ``belongs_to :lot, class_name: 'Unidom::Inventory::Lot'``  
 4. Define the has_many :pick_items macro as: ``has_many :pick_items, class_name: 'Unidom::Inventory::PickItem', as: :inventory_item``  
-5. Define the has_many :variances macro as: ``has_many :variances, class_name: 'Unidom::Inventory::InventoryItemVariance', as: :inventory_item``
+5. Define the has_many :variances macro as: ``has_many :variances, class_name: 'Unidom::Inventory::InventoryItemVariance', as: :inventory_item``  
+6. Define the #is_adjusted! method as: ``is_adjusted!(quantity, due_to: nil, at: Time.now, description: nil, instruction: nil)``
 
 ### As Store concern
 
