@@ -17,4 +17,18 @@ class Unidom::Inventory::InventoryItemVariance < ActiveRecord::Base
   scope :inventory_item_is, ->(inventory_item) { where inventory_item: inventory_item }
   scope :caused_by,         ->(reason)         { where reason:         reason         }
 
+  def self.adjust!(inventory_item, quantity: nil, due_to: nil, at: Time.now, description: nil, instruction: nil)
+    if inventory_item.respond_to? :quantity
+      inventory_item.increment! :quantity, quantity
+    else
+      if quantity.nil?
+        quantity = -1
+        inventory_item.soft_destroy
+      else
+        raise ArgumentError.new('The quantity should be -1 when Inventory Item Variance adjusts a Serialized Inventory Item.')
+      end
+    end
+    create! inventory_item: inventory_item, reason: due_to, quantity: quantity, description: description, instruction: instruction, opened_at: at
+  end
+
 end
