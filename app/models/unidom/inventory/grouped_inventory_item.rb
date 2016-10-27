@@ -1,6 +1,6 @@
 # Grouped Inventory Item 是分组库存项。
 
-class Unidom::Inventory::GroupedInventoryItem < ActiveRecord::Base
+class Unidom::Inventory::GroupedInventoryItem < Unidom::Inventory::ApplicationRecord
 
   self.table_name = 'unidom_grouped_inventory_items'
 
