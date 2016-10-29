@@ -3,7 +3,7 @@
 # #inventory_item 是库存项，可以由 #pick_item 导出。
 # #target_item 是目标项，比如： ShipmentItem 、 OrderItem 等。
 
-class Unidom::Inventory::ItemIssuing < ActiveRecord::Base
+class Unidom::Inventory::ItemIssuing < Unidom::Inventory::ApplicationRecord
 
   self.table_name = 'unidom_item_issuings'
 
