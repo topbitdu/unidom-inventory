@@ -1,6 +1,6 @@
 # Lot 是批量。
 
-class Unidom::Inventory::Lot < ActiveRecord::Base
+class Unidom::Inventory::Lot < Unidom::Inventory::ApplicationRecord
 
   self.table_name = 'unidom_lots'
 
