@@ -1,6 +1,6 @@
 # Pick List 是出库单。
 
-class Unidom::Inventory::PickList < ActiveRecord::Base
+class Unidom::Inventory::PickList < Unidom::Inventory::ApplicationRecord
 
   self.table_name = 'unidom_pick_lists'
 
