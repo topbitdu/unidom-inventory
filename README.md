@@ -60,7 +60,9 @@ grouped_inventory_item.is_adjusted! 10, due_to: nil, at: Time.now, description: 
 ## Include the Concerns
 
 ```ruby
-include Unidom::Inventory::AsInventoryItem
+include Unidom::Inventory::Concerns::AsInventoryItem
+include Unidom::Inventory::Concerns::AsStore
+include Unidom::Inventory::Concerns::AsStored
 ```
 
 ### As Inventory Item concern
