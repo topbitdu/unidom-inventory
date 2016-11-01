@@ -1,6 +1,6 @@
 # Serialized Inventory Item 是序列化库存项。
 
-class Unidom::Inventory::SerializedInventoryItem < ActiveRecord::Base
+class Unidom::Inventory::SerializedInventoryItem < Unidom::Inventory::ApplicationRecord
 
   self.table_name = 'unidom_serialized_inventory_items'
 
