@@ -3,7 +3,7 @@
 # #reason 是调整的原因。
 # #quantity 是调整数量，正数表示库存增加，负数表示库存减少。
 
-class Unidom::Inventory::InventoryItemVariance < ActiveRecord::Base
+class Unidom::Inventory::InventoryItemVariance < Unidom::Inventory::ApplicationRecord
 
   self.table_name = 'unidom_inventory_item_variances'
 
