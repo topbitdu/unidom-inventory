@@ -15,7 +15,7 @@
 
 ## v0.4
 1. Lot model & migration
-2. Improve the As Inventory Item to add the optional #lot association
+2. Improved the As Inventory Item to add the optional #lot association
 
 ## v0.5
 1. Item Issuing model & migration
