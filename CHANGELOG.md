@@ -21,7 +21,7 @@
 1. Item Issuing model & migration
 2. Pick List model & migration
 3. Pick Item model & migration
-4. Improve the As Inventory Item concern to add the #pick_items association
+4. Improved the As Inventory Item concern to add the #pick_items association
 
 ## v0.6
 1. Inventory Item Variance model & migration
