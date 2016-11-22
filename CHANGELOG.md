@@ -2,7 +2,7 @@
 
 ## v0.1
 1. Serialized Inventory Item model & migration (20020901000000)
-2. Grouped Inventory Item model & migration
+2. Grouped Inventory Item model & migration (20020902000000)
 
 ## v0.2
 1. As Inventory Item concern
