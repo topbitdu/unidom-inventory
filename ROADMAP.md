@@ -14,7 +14,7 @@
 2. As Stored concern
 
 ## v0.4
-1. Lot model & migration
+1. Lot model & migration (20020911000000)
 2. Improve the As Inventory Item concern to add the optional #lot association
 
 ## v0.5
