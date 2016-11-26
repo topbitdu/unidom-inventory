@@ -18,7 +18,7 @@
 2. Improve the As Inventory Item concern to add the optional #lot association
 
 ## v0.5
-1. Item Issuing model & migration
+1. Item Issuing model & migration (20020923000000)
 2. Pick List model & migration
 3. Pick Item model & migration
 4. Improve the As Inventory Item concern to add the #pick_items association
