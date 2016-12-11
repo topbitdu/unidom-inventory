@@ -15,7 +15,7 @@
 
 ## v0.4
 1. Lot model & migration (20020911000000)
-2. Improve the As Inventory Item concern to add the optional ``belongs_to :lot`` association
+2. Improve the As Inventory Item concern to add the optional ``belongs_to :lot`` macro
 
 ## v0.5
 1. Item Issuing model & migration (20020923000000)
