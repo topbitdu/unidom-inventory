@@ -21,7 +21,7 @@
 1. Item Issuing model & migration (20020923000000)
 2. Pick List model & migration (20020921000000)
 3. Pick Item model & migration (20020921000000)
-4. Improved the As Inventory Item concern to add the #pick_items association
+4. Improved the As Inventory Item concern to add the ``has_many :pick_items, class_name: 'Unidom::Inventory::PickItem', as: :inventory_item`` macro
 
 ## v0.6
 1. Inventory Item Variance model & migration
