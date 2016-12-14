@@ -24,7 +24,7 @@
 4. Improve the As Inventory Item concern to add the ``has_many :pick_items, class_name: 'Unidom::Inventory::PickItem', as: :inventory_item`` macro
 
 ## v0.6
-1. Inventory Item Variance model & migration
+1. Inventory Item Variance model & migration (20020903000000)
 2. Improve the As Inventory Item concern to add the #variances association
 
 ## v0.7
