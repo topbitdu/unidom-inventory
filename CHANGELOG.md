@@ -28,7 +28,7 @@
 2. Improve the As Inventory Item concern to add the #variances association
 
 ## v0.7
-1. Improve the Inventory Item Variance model to add the .adjust! method
+1. Improve the Inventory Item Variance model to add the .``adjust!`` method
 2. Improve the As Inventory Item concern to add the #is_adjusted! method
 
 ## v0.7.1
