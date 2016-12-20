@@ -29,7 +29,7 @@
 
 ## v0.7
 1. Improve the Inventory Item Variance model to add the .``adjust!`` method
-2. Improve the As Inventory Item concern to add the #is_adjusted! method
+2. Improve the As Inventory Item concern to add the #``is_adjusted!`` method
 
 ## v0.7.1
 1. Improve the Ruby Gem Specification to depend on [unidom-common](https://github.com/topbitdu/unidom-common) v1.6
