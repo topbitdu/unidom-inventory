@@ -25,7 +25,7 @@
 
 ## v0.6
 1. Inventory Item Variance model & migration (20020903000000)
-2. Improved the As Inventory Item concern to add the #variances association
+2. Improved the As Inventory Item concern to add the ``has_many :variances,  class_name: 'Unidom::Inventory::InventoryItemVariance', as: :inventory_item`` macro
 
 ## v0.7
 1. Improve the Inventory Item Variance model to add the .``adjust!`` method
