@@ -28,7 +28,7 @@
 2. Improved the As Inventory Item concern to add the ``has_many :variances,  class_name: 'Unidom::Inventory::InventoryItemVariance', as: :inventory_item`` macro
 
 ## v0.7
-1. Improve the Inventory Item Variance model to add the .``adjust!`` method
+1. Improved the Inventory Item Variance model to add the .``adjust!`` method
 2. Improve the As Inventory Item concern to add the #``is_adjusted!`` method
 
 ## v0.7.1
