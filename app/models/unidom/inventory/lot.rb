@@ -1,3 +1,4 @@
+##
 # Lot 是批量。
 
 class Unidom::Inventory::Lot < Unidom::Inventory::ApplicationRecord
