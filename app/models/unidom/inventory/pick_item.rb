@@ -1,3 +1,4 @@
+##
 # Pick Item 是出库单项。
 
 class Unidom::Inventory::PickItem < Unidom::Inventory::ApplicationRecord
