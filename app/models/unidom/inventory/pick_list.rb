@@ -1,3 +1,4 @@
+##
 # Pick List 是出库单。
 
 class Unidom::Inventory::PickList < Unidom::Inventory::ApplicationRecord
