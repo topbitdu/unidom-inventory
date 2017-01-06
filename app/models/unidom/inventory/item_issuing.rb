@@ -1,3 +1,4 @@
+##
 # Item Issuing 是条目出库。
 # #pick_item 是出库项。
 # #inventory_item 是库存项，可以由 #pick_item 导出。
