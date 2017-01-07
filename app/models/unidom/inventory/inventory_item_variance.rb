@@ -1,3 +1,4 @@
+##
 # Inventory Item Variance 是库存项变化。
 # #inventory_item 是被调整的库存项。
 # #reason 是调整的原因。
