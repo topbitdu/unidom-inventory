@@ -1,3 +1,4 @@
+##
 # Grouped Inventory Item 是分组库存项。
 
 class Unidom::Inventory::GroupedInventoryItem < Unidom::Inventory::ApplicationRecord
