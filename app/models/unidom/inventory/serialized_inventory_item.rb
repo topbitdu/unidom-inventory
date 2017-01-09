@@ -1,3 +1,4 @@
+##
 # Serialized Inventory Item 是序列化库存项。
 
 class Unidom::Inventory::SerializedInventoryItem < Unidom::Inventory::ApplicationRecord
