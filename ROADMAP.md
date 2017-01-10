@@ -42,4 +42,4 @@
 
 ## v0.7.4
 1. Improve the Ruby Gem Specification to depend on [unidom-common](https://github.com/topbitdu/unidom-common) v1.8
-2. Improve the Engine class to include the Engine Extension
+2. Improve the Engine class to include the Engine Extension concern
