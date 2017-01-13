@@ -18,6 +18,10 @@ class Unidom::Inventory::InventoryItemVariance < Unidom::Inventory::ApplicationR
   scope :inventory_item_is, ->(inventory_item) { where inventory_item: inventory_item }
   scope :caused_by,         ->(reason)         { where reason:         reason         }
 
+  ##
+  # 对库存项 inventory_item 进行调整。调整数量为 quantity ，缺省为 nil 。调整原因为 due_to 。调整时间为 at ，缺省为当前时间。
+  # 另有适用于己方的备注信息 description 和适用于对方的备注信息 instruction 。
+  # Unidom::Inventory::InventoryItemVariance.adjust! inventory_item, quantity: 3
   def self.adjust!(inventory_item, quantity: nil, due_to: nil, at: Time.now, description: nil, instruction: nil)
     if inventory_item.respond_to? :quantity
       inventory_item.increment! :quantity, quantity
