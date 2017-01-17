@@ -13,4 +13,4 @@ class Unidom::Inventory::Lot < Unidom::Inventory::ApplicationRecord
   has_many :grouped_inventory_items,    class_name: 'Unidom::Inventory::GroupedInventoryItem'
   has_many :serialized_inventory_items, class_name: 'Unidom::Inventory::SerializedInventoryItem'
 
-end
+end unless Unidom::Common::Neglection.namespace_neglected? 'Unidom::Inventory::Lot'
