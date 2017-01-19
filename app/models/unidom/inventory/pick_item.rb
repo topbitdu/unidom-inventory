@@ -12,4 +12,4 @@ class Unidom::Inventory::PickItem < Unidom::Inventory::ApplicationRecord
   belongs_to :pick_list,      class_name:  'Unidom::Inventory::PickList'
   belongs_to :inventory_item, polymorphic: true
 
-end
+end unless Unidom::Common::Neglection.namespace_neglected? 'Unidom::Inventory::PickItem'
