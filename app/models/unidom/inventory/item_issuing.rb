@@ -16,4 +16,4 @@ class Unidom::Inventory::ItemIssuing < Unidom::Inventory::ApplicationRecord
   belongs_to :inventory_item, polymorphic: true
   belongs_to :target_item,    polymorphic: true
 
-end
+end unless Unidom::Common::Neglection.namespace_neglected? 'Unidom::Inventory::ItemIssuing'
