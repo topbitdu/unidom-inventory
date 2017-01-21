@@ -36,4 +36,4 @@ class Unidom::Inventory::InventoryItemVariance < Unidom::Inventory::ApplicationR
     create! inventory_item: inventory_item, reason: due_to, quantity: quantity, description: description, instruction: instruction, opened_at: at
   end
 
-end
+end unless Unidom::Common::Neglection.namespace_neglected? 'Unidom::Inventory::InventoryItemVariance'
