@@ -10,4 +10,4 @@ class Unidom::Inventory::GroupedInventoryItem < Unidom::Inventory::ApplicationRe
 
   validates :quantity, presence: true, numericality: true
 
-end
+end unless Unidom::Common::Neglection.namespace_neglected? 'Unidom::Inventory::GroupedInventoryItem'
