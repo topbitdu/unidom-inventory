@@ -10,4 +10,4 @@ class Unidom::Inventory::SerializedInventoryItem < Unidom::Inventory::Applicatio
 
   validates :serial_number, presence: true, length: { in: 2..columns_hash['serial_number'].limit }
 
-end
+end unless Unidom::Common::Neglection.namespace_neglected? 'Unidom::Inventory::SerializedInventoryItem'
