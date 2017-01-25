@@ -96,3 +96,19 @@ The As Stored concern do the following tasks for the includer automatically:
 1. Define the has_many :grouped_inventory_items macro as: ``has_many :grouped_inventory_items, class_name: 'Unidom::Inventory::GroupedInventoryItem', foreign_key: :stored_id``
 
 2. Define the has_many :serialized_inventory_items macro as: ``has_many :serialized_inventory_items, class_name: 'Unidom::Inventory::SerializedInventoryItem', foreign_key: :stored_id``
+
+
+
+## Disable the Model & Migration
+
+If you only need the app components other than models, the migrations should be neglected, and the models should not be loaded.
+```ruby
+# config/initializers/unidom.rb
+Unidom::Common.configure do |options|
+
+  options[:neglected_namespaces] = %w{
+    Unidom::Inventory
+  }
+
+end
+```
