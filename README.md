@@ -1,6 +1,8 @@
 # Unidom Inventory 库存领域模型引擎
 
+[![Documentation](http://img.shields.io/badge/docs-rdoc.info-blue.svg)](http://www.rubydoc.info/gems/unidom-inventory/frames)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](http://opensource.org/licenses/MIT)
+
 [![Gem Version](https://badge.fury.io/rb/unidom-inventory.svg)](https://badge.fury.io/rb/unidom-inventory)
 [![Dependency Status](https://gemnasium.com/badges/github.com/topbitdu/unidom-inventory.svg)](https://gemnasium.com/github.com/topbitdu/unidom-inventory)
 
