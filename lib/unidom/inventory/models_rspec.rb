@@ -1,0 +1,7 @@
+require 'rspec/models/unidom/inventory/grouped_inventory_item_spec'    unless Unidom::Common::Neglection.namespace_neglected? 'Unidom::Inventory::GroupedInventoryItem'
+require 'rspec/models/unidom/inventory/inventory_item_variance_spec'   unless Unidom::Common::Neglection.namespace_neglected? 'Unidom::Inventory::InventoryItemVariance'
+require 'rspec/models/unidom/inventory/item_issuing_spec'              unless Unidom::Common::Neglection.namespace_neglected? 'Unidom::Inventory::ItemIssuing'
+require 'rspec/models/unidom/inventory/lot_spec'                       unless Unidom::Common::Neglection.namespace_neglected? 'Unidom::Inventory::Lot'
+require 'rspec/models/unidom/inventory/pick_item_spec'                 unless Unidom::Common::Neglection.namespace_neglected? 'Unidom::Inventory::PickItem'
+require 'rspec/models/unidom/inventory/pick_list_spec'                 unless Unidom::Common::Neglection.namespace_neglected? 'Unidom::Inventory::PickList'
+require 'rspec/models/unidom/inventory/serialized_inventory_item_spec' unless Unidom::Common::Neglection.namespace_neglected? 'Unidom::Inventory::SerializedInventoryItem'
