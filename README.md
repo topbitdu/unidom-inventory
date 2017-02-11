@@ -114,3 +114,18 @@ Unidom::Common.configure do |options|
 
 end
 ```
+
+
+
+## RSpec examples
+
+```ruby
+# spec/models/unidom_spec.rb
+require 'unidom/inventory/models_rspec'
+
+# spec/types/unidom_spec.rb
+require 'unidom/inventory/types_rspec'
+
+# spec/validators/unidom_spec.rb
+require 'unidom/inventory/validators_rspec'
+```
