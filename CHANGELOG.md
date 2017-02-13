@@ -32,7 +32,7 @@
 2. Improved the As Inventory Item concern to add the #``is_adjusted!`` method
 
 ## v0.7.1
-1. Improve the Ruby Gem Specification to depend on [unidom-common](https://github.com/topbitdu/unidom-common) v1.6
+1. Improved the Ruby Gem Specification to depend on [unidom-common](https://github.com/topbitdu/unidom-common) v1.6
 
 ## v0.7.2
 1. Improve the Ruby Gem Specification to depend on [unidom-common](https://github.com/topbitdu/unidom-common) v1.7
