@@ -10,7 +10,7 @@ class CreateUnidomGroupedInventoryItems < ActiveRecord::Migration
         polymorphic: { null: false, default: '', limit: 200 }
       t.references :lot,    type: :uuid, null: true
 
-      t.decimal :quantity, null: false, default: 0.0, precision: 10, scale: 6
+      t.decimal :quantity, null: false, default: 0.0, precision: 12, scale: 2
 
       t.column   :state, 'char(1)', null: false, default: 'C'
       t.datetime :opened_at,        null: false, default: ::Time.utc(1970)
