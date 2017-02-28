@@ -5,7 +5,7 @@ class CreateUnidomLots < ActiveRecord::Migration
     create_table :unidom_lots, id: :uuid do |t|
 
       t.string  :identification_number, null: false, default: '', limit: 200
-      t.decimal :quantity,              null: false, default: 0.0, precision: 10, scale: 6
+      t.decimal :quantity,              null: false, default: 0.0, precision: 12, scale: 2
 
       t.text :description
       t.text :instruction
