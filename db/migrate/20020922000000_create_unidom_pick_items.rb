@@ -8,7 +8,7 @@ class CreateUnidomPickItems < ActiveRecord::Migration
       t.references :inventory_item, type: :uuid, null: false,
         polymorphic: { null: false, default: '', limit: 200 }
 
-      t.decimal :quantity, null: false, default: 0.0, precision: 10, scale: 6
+      t.decimal :quantity, null: false, default: 0.0, precision: 12, scale: 2
 
       t.text :description
       t.text :instruction
