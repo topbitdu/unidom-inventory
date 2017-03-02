@@ -10,7 +10,7 @@ class CreateUnidomItemIssuings < ActiveRecord::Migration
       t.references :target_item,    type: :uuid, null: true,
         polymorphic: { null: true,  default: nil, limit: 200 }
 
-      t.decimal :quantity, null: false, default: 0.0, precision: 10, scale: 6
+      t.decimal :quantity, null: false, default: 0.0, precision: 12, scale: 2
 
       t.text :description
       t.text :instruction
