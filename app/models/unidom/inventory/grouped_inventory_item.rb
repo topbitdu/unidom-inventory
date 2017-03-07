@@ -8,6 +8,7 @@ class Unidom::Inventory::GroupedInventoryItem < Unidom::Inventory::ApplicationRe
   include Unidom::Common::Concerns::ModelExtension
   include Unidom::Inventory::Concerns::AsInventoryItem
 
-  validates :quantity, presence: true, numericality: true
+  #validates :quantity, presence: true, numericality: true
+  validates :quantity, presence: true, numericality: { greater_than_or_equal_to: 0.0, less_than: 1_000_000_000.00 }
 
 end unless Unidom::Common::Neglection.namespace_neglected? 'Unidom::Inventory::GroupedInventoryItem'
