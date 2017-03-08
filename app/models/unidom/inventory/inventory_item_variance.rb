@@ -10,7 +10,8 @@ class Unidom::Inventory::InventoryItemVariance < Unidom::Inventory::ApplicationR
 
   include Unidom::Common::Concerns::ModelExtension
 
-  validates :quantity, presence: true, numericality: true
+  #validates :quantity, presence: true, numericality: true
+  validates :quantity, presence: true, numericality: { greater_than: -1_000_000_000.00, less_than: 1_000_000_000.00 }
 
   belongs_to :inventory_item, polymorphic: true
   belongs_to :reason,         polymorphic: true
