@@ -1,3 +1,5 @@
+require 'rspec/models/unidom/inventory/concerns/as_inventory_item_shared_examples'
+
 describe Unidom::Inventory::GroupedInventoryItem, type: :model do
 
   before :each do
@@ -21,6 +23,8 @@ describe Unidom::Inventory::GroupedInventoryItem, type: :model do
 
     it_behaves_like 'validates numericality', model_attributes, :quantity,
       range: 0..1_000_000_000, minimum_inclusive: true, maximum_inclusive: true
+
+    it_behaves_like 'Unidom::Inventory::Concerns::AsInventoryItem', model_attributes
 
   end
 
