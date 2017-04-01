@@ -71,3 +71,9 @@
 1. Improve the Grouped Inventory Item model for the validations on the #quantity attribute
 2. Improve the Grouped Inventory Item spec for the validations on the #quantity attribute
 3. Improve the Serialized Inventory Item spec for the validations on the #serial_number attribute
+
+## v1.0.3
+1. As Inventory Item shared examples
+2. Improve the Grouped Inventory Item spec for the As Inventory Item concern
+3. Improve the Serialized Inventory Item spec for the As Inventory Item concern
+4. RSpec shared examples manifest

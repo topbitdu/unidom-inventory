@@ -119,6 +119,8 @@ end
 
 ## RSpec examples
 
+### RSpec example manifest (run automatically)
+
 ```ruby
 # spec/models/unidom_spec.rb
 require 'unidom/inventory/models_rspec'
@@ -128,4 +130,31 @@ require 'unidom/inventory/types_rspec'
 
 # spec/validators/unidom_spec.rb
 require 'unidom/inventory/validators_rspec'
+```
+
+### RSpec shared examples (to be integrated)
+
+```ruby
+# The Unidom::Inventory::GroupedInventoryItem model & the Unidom::Inventory::SerializedInventoryItem model already include the Unidom::Inventory::Concerns::AsInventoryItem concern
+# app/models/your_inventory_item.rb
+class YourInventoryItem < ApplicationRecord
+
+  include Unidom::Common::Concerns::ModelExtension
+  include Unidom::Inventory::Concerns::AsInventoryItem
+
+end
+
+# spec/support/unidom_rspec_shared_examples.rb
+require 'unidom/inventory/rspec_shared_examples'
+
+# spec/models/unidom/party/person_spec.rb
+describe YourInventoryItem, type: :model do
+
+  model_attribtues = {
+    your_attribute: 'your value'
+  }
+
+  it_behaves_like 'Unidom::Inventory::Concerns::AsInventoryItem', model_attribtues
+
+end
 ```
