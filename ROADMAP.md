@@ -77,3 +77,7 @@
 2. Improve the Grouped Inventory Item spec for the As Inventory Item concern
 3. Improve the Serialized Inventory Item spec for the As Inventory Item concern
 4. RSpec shared examples manifest
+
+## v1.0.4
+1. As Store shared examples
+2. Improve the RSpec shared examples manifest to require the As Store shared examples
