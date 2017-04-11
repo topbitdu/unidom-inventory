@@ -135,6 +135,13 @@ require 'unidom/inventory/validators_rspec'
 ### RSpec shared examples (to be integrated)
 
 ```ruby
+# lib/unidom.rb
+Unidom::Party::Shop.class_eval do
+
+  include Unidom::Inventory::Concerns::AsStored
+
+end
+
 # The Unidom::Inventory::GroupedInventoryItem model & the Unidom::Inventory::SerializedInventoryItem model already include the Unidom::Inventory::Concerns::AsInventoryItem concern
 # app/models/your_inventory_item.rb
 class YourInventoryItem < ApplicationRecord
@@ -147,14 +154,25 @@ end
 # spec/support/unidom_rspec_shared_examples.rb
 require 'unidom/inventory/rspec_shared_examples'
 
-# spec/models/unidom/party/person_spec.rb
+# spec/models/unidom/party/shop_spec.rb
+describe Unidom::Party::Shop, type: :model do
+
+  it_behaves_like 'Unidom::Inventory::Concerns::AsStore', model_attributes
+
+end
+
+# spec/models/your_inventory_item_spec.rb
 describe YourInventoryItem, type: :model do
 
-  model_attribtues = {
-    your_attribute: 'your value'
-  }
+  context do
 
-  it_behaves_like 'Unidom::Inventory::Concerns::AsInventoryItem', model_attribtues
+    model_attribtues = {
+      your_attribute: 'your value'
+    }
+
+    it_behaves_like 'Unidom::Inventory::Concerns::AsInventoryItem', model_attribtues
+
+  end
 
 end
 ```
