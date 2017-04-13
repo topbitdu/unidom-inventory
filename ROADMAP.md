@@ -81,3 +81,7 @@
 ## v1.0.4
 1. As Store shared examples
 2. Improve the RSpec shared examples manifest to require the As Store shared examples
+
+## v1.0.5
+1. As Stored shared examples
+2. Improve the RSpec shared examples manifest to require the As Stored shared examples
