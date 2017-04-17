@@ -138,9 +138,16 @@ require 'unidom/inventory/validators_rspec'
 # lib/unidom.rb
 Unidom::Party::Shop.class_eval do
 
+  include Unidom::Inventory::Concerns::AsStore
+
+end
+
+Unidom::Product::Product.class_eval do
+
   include Unidom::Inventory::Concerns::AsStored
 
 end
+
 
 # The Unidom::Inventory::GroupedInventoryItem model & the Unidom::Inventory::SerializedInventoryItem model already include the Unidom::Inventory::Concerns::AsInventoryItem concern
 # app/models/your_inventory_item.rb
@@ -158,6 +165,13 @@ require 'unidom/inventory/rspec_shared_examples'
 describe Unidom::Party::Shop, type: :model do
 
   it_behaves_like 'Unidom::Inventory::Concerns::AsStore', model_attributes
+
+end
+
+# spec/models/unidom/product/product_spec.rb
+describe Unidom::Product::Product, type: :model do
+
+  it_behaves_like 'Unidom::Inventory::Concerns::AsStored', model_attributes
 
 end
 
