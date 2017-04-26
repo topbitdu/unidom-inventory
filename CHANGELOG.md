@@ -62,7 +62,7 @@
 
 ## v1.0.1
 1. Improved the Grouped Inventory Item model for the validations on the #quantity attribute
-2. Improve the Inventory Item Variance model for the validations on the #quantity attribute
+2. Improved the Inventory Item Variance model for the validations on the #quantity attribute
 3. Improve the Grouped Inventory Item spec for the validations on the #quantity attribute
 4. Improve the Inventory Item Variance spec for the validations on the #quantity attribute
 5. Improve the Serialized Inventory Item spec for the validations on the #serial_number attribute
