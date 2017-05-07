@@ -58,7 +58,7 @@
 2. Improve the Inventory Item Variance migration for the #``quantity`` column
 3. Improve the Lot migration for the #``quantity`` column
 4. Improve the Pick Item migration for the #``quantity`` column
-5. Improve the Item Issuing migration for the #quantity column
+5. Improve the Item Issuing migration for the #``quantity`` column
 
 ## v1.0.1
 1. Improve the Grouped Inventory Item model for the validations on the #quantity attribute
