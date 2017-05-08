@@ -58,7 +58,7 @@
 2. Improved the Inventory Item Variance migration for the #``quantity`` column
 3. Improved the Lot migration for the #``quantity`` column
 4. Improved the Pick Item migration for the #``quantity`` column
-5. Improved the Item Issuing migration for the #quantity column
+5. Improved the Item Issuing migration for the #``quantity`` column
 
 ## v1.0.1
 1. Improved the Grouped Inventory Item model for the validations on the #quantity attribute
