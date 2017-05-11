@@ -85,3 +85,7 @@
 ## v1.0.5
 1. As Stored shared examples
 2. Improve the RSpec shared examples manifest to require the As Stored shared examples
+
+## v1.0.6
+1. Improve the Ruby Gem Specification to depend on unidom-common v1.10
+2. Improve the Serialized Inventory Item migration, the Grouped Inventory Item migration, the Inventory Item Variance migration, the Lot migration, the Pick List migration, the Pick Item migration, & the Item Issuing migration for the #opened_at column, & the #closed_at column
